@@ -4,7 +4,13 @@
 #' 
 #' @export
 #' @param myname your name. Required.
+
+require(Seurat)
+
 hello <- function(myname = ""){
+  
+  pbmc.data <- Read10X(data.dir = "C:\\hg19")
+  
   if(myname == ""){
     stop("Tell me your name!")
   }
